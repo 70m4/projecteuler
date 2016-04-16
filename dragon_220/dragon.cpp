@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 		int steps = atoi(argv[2]);
 		dragon d(level,steps);
 	} else
-		dragon d2(50,1000000000);
+		dragon d2(50,10000000);
 		
 	return 0;
 }
