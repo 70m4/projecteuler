@@ -3,4 +3,4 @@ compiler:
 - g++
 os:
 - linux
-script: g++ dragon_220/dragon.cpp
+script: g++ -o output dragon_220/dragon.cpp && ./output
