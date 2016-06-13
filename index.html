@@ -1,0 +1,331 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @70m4
+ Watch 0
+  Star 0
+  Fork 1 emilevauge/devoxxFR2016
+ Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs
+Branch: master Find file Copy pathdevoxxFR2016/index.html
+af76f4b  on Apr 20
+@emilevauge emilevauge Initial commit
+1 contributor
+RawBlameHistory     316 lines (246 sloc)  8.01 KB
+<!--
+slidedeck: A modification of the Google IO 2012 HTML5 slide template
+URL: https://github.com/rmcgibbo/slidedeck
+Based on https://github.com/francescolaffi/elastic-google-io-slides, and
+ultimately:
+Google IO 2012 HTML5 Slide Template
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahe <lukem@google.com>
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Træfɪk </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+   <link rel="shortcut icon" href=" figures/traefik.icon.png"/> 
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="theme/css/custom.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides", src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
+
+
+  <!-- MathJax support  -->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    showProcessingMessages: false,
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    TeX: {
+      extensions: ["color.js"]
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <div style="display:hidden">
+  \[
+    \definecolor{data}{RGB}{18,110,213}
+    \definecolor{unknown}{RGB}{217,86,16}
+    \definecolor{learned}{RGB}{175,114,176}
+  \]
+  </div>
+
+</head>
+
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+<slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+
+    <h1><img height=300 src=figures/traefik.logo.png /></h1>
+    <h2> A modern reverse-proxy</h2>
+    <p> Emile Vauge<br/> DevoxxFR 2016</p>
+  </hgroup>
+</slide>
+
+
+<slide  >
+  
+    <hgroup>
+      <h2>/WhoamI</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>DevOps, Developer</li>
+<li>I ❤ Docker 🐳, I ❤ Go</li>
+<li>I have been working @ Thales, Airbus, Lyra, Zenika</li>
+<li>Creator and maintainer of træfik <img src=figures/traefik.icon.png /></li>
+</ul></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Why another reverse-proxy ?</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img src=figures/why.jpg /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Microservices</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img src=figures/microservices.jpg /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Containers</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=150 src=figures/docker-logo.png /></p>
+<p><img height=150 src=figures/rkt.png /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Orchestration</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=200 src=figures/mesos-logo.jpeg />
+<img height=200 src=figures/swarm.png /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Service discovery</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=200 src=figures/consul-logo.png /></p>
+<p><img height=150 src=figures/etcd-logo.png /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Here comes</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=400 src=figures/traefik.logo.png /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Reverse-proxy</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=500 src=figures/traditionnalArchitecture.png /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Træfik</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=500 src=figures/traefikArchitecture.png /></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Features</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li><strong>Single binary</strong> Did I say I ❤ Go ?</li>
+<li><strong>Backends</strong>: Docker, Swarm, Mesos / Marathon, Consul, Etcd, Zookeeper...</li>
+<li><strong>Hot reloading</strong></li>
+<li><strong>Load-balancing</strong>: WRR, DRR</li>
+<li><strong>Circuit breakers</strong></li>
+<li><strong>Replay</strong></li>
+<li><strong>Web UI</strong></li>
+</ul></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Demo</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=400 src=figures/priere.jpg /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Great!</h2>
+      <h3>But wait, how do you manage SSL certs?</h3>
+    </hgroup>
+    <article ><p><img height=400 src=figures/greatBut.gif /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Let's Encrypt</h2>
+      <h3>Free, automated certificate authority</h3>
+    </hgroup>
+    <article ><p><img height=200 src=figures/letsencrypt-logo-horizontal.svg /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>One for the road</h2>
+      <h3>And now, Kubernetes Ingress support!</h3>
+    </hgroup>
+    <article ><p><br/>
+<img height=200 src=figures/k8s.logo.svg /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2></h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><br/>
+<br/>
+<br/></p>
+<p><img height=150 src=https://img.shields.io/github/stars/containous/traefik.svg?style=social&label=Star /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Now part of</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>
+<p>Cisco Cloud
+<img height=150 src=figures/mantl-logo.png /></p>
+</li>
+<li>
+<p>Cap Gemini
+<img height=150 src=figures/apollo-logo.png /></p>
+</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Then I created a Zstartup</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=130 src=figures/zenika.logo.png /></p>
+<p><img height=150 src=figures/arrow.jpg /></p>
+<p><img height=150 src=figures/containous.logo.png /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>I have stickers!</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=400 src=figures/traefik.sticker.png /></p></article>
+ 
+</slide>
+
+
+<slide class="thank-you-slide segue nobackground">
+  <!-- <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside> -->
+  <article class="flexbox vleft auto-fadein">
+    <h2> Thank you!</h2>
+    <p></p>
+  </article>
+  <p data-config-contact class="auto-fadein"> <a href="https://traefik.io">traefik.io</a><br/> <a href="https://containo.us">containo.us</a><br/> <a href="https://twitter.com/traefikproxy">@traefikproxy</a><br/> <a href="https://twitter.com/emilevauge">@emilevauge</a></p>
+  </p>
+</slide>
+
+<slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
